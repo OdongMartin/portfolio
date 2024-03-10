@@ -1,113 +1,190 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+//import Link from "next/link"
+import { Link } from 'react-scroll';
+import {useRef, useEffect, useState} from 'react'
+
+const Home = () => {
+  // scif-random words
+  const handleHover = (e) => {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    //console.log("yooo:", e.target.innerText)
+    //e.target.innerText.split('').map((letter) => {console.log(letter)})
+    //e.target.innerText = letters[Math.floor(Math.random() * 26)];
+
+    let iterations = 0;
+    const interval = setInterval(() =>{
+      e.target.innerText = e.target.innerText.split('').map((letter, index) =>{
+        if(index < iterations) {
+          return e.target.dataset.value[index]
+        }
+        return letters[Math.floor(Math.random() * 26)];
+      }).join("")
+
+      if(iterations >= e.target.dataset.value.length) clearInterval(interval);
+
+      iterations += 1/3;
+    }, 30)
+  }
+
+  // handle blob logic
+  const myBlobRef = useRef(null);
+ useEffect(() => {
+    const blob = myBlobRef.current;
+    if (blob) {
+      const handleMouseMove = (event) => {
+        const { clientX, clientY } = event;
+
+        // adjust the positioning based on the scroll position
+        const offsetX = window.scrollX || document.documentElement.scrollLeft;
+        const offsetY = window.scrollY || document.documentElement.scrollTop;
+
+        blob.style.position = 'absolute';
+        // blob.style.left = `${clientX}px`;
+        // blob.style.top = `${clientY}px`;
+        blob.animate({
+          left:`${clientX + offsetX}px`,
+          top:`${clientY + offsetY}px`
+        }, { duration: 2000, fill: "forwards"}) 
+
+      };
+
+      // add event listener to the window
+      window.addEventListener('pointermove', handleMouseMove);
+
+      return () => {
+        window.removeEventListener('pointermove', handleMouseMove);
+      };
+    }
+  }, []);
+  
+  //react-scroll
+  const [currentFloor, setCurrentFloor] = useState(0);
+
+  const handleScrollToFloor = (floor) => {
+    setCurrentFloor(floor);
+  };
+ 
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      {/* <style>{`
+          body {
+            overflow: hidden;
+          }
+        `}
+      </style> */}
+      <div className='bg-black h-screen w-screen absolute inset-0'>
+        {/* blob and blur */}
+        <div className='flex'>
+          {/* blur */}
+          <div 
+            className='h-screen w-screen'
+            style={{
+              position: 'absolute',
+              zIndex: 2,
+              backdropFilter: 'blur(200px)'
+            }}
+            //ref={blurRef} 
+            id='blur'>
+
+          </div>
+          {/* background blob thingi */}
+          <div 
+            ref={myBlobRef}
+            id = 'blob'
+            className='bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
+            style={{ 
+              height: '300px',
+              width: '300px',
+              left: '50%',
+              top: '50%',
+              translate: '-50% -50%',
+              borderRadius: '50%',
+              pointerEvents: 'none'
+            }}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          </div>
+        </div>
+        
+
+        <div  className='flex' style={{zIndex: 3, position:'fixed'}}>          
+          {/* word random */}
+          <div 
+            className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
+            onMouseEnter={handleHover} 
+            style={{
+              cursor:'pointer', 
+              // zIndex: 3
+            }}
+            data-value='HOME'
+           > 
+          {/* <Link to='contacts' smooth={true} duration={500} onClick={() => handleScrollToFloor(3)}>HOME</Link> */}
+          HOME
+          </div>
+
+          <div 
+              className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
+              onMouseEnter={handleHover} 
+              style={{
+                cursor:'pointer',
+                // zIndex: 3
+              }}
+              data-value='ABOUT'
+            > ABOUT
+          </div>
+          
+          <div 
+              className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
+              onMouseEnter={handleHover} 
+              style={{
+                cursor:'pointer',
+                // zIndex: 3
+              }}
+              data-value='PROJECTS'
+            > PROJECTS
+          </div>
+
+          <div 
+              className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
+              onMouseEnter={handleHover} 
+              style={{
+                cursor:'pointer',
+                // zIndex: 3
+              }}
+              data-value='CONTACTS'
+            > 
+            {/* <Link to='contacts' smooth={true} duration={500} onClick={() => handleScrollToFloor(3)}>CONTACTS</Link> */}
+          CONTACTS
+          </div>
+        </div>
+
+          {/* Elevator */}
+        <div className="elevator h-screen" style={{zIndex: 3}}>
+            {/* Home Floor */}
+              <div id="home" className={`floor ${currentFloor === 0 ? 'active' : ''} h-full  text-white`} >
+            0
+          </div>
+          {/* About Floor */}
+          <div id="about" className={`floor ${currentFloor === 1 ? 'active' : ''} h-full text-white `} >
+           
+            1
+          </div>
+
+          {/* Projects Floor */}
+          <div id="projects" className={`floor ${currentFloor === 2 ? 'active' : ''} h-full text-white`} >
+            
+            2
+          </div>
+
+          {/* Contact Floor */}
+          <div id="contacts" className={`floor ${currentFloor === 3 ? 'active' : ''} h-full text-white`} >
+            3
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    </>
+  )
 }
+
+export default Home
