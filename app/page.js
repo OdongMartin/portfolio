@@ -3,6 +3,7 @@
 //import Link from "next/link"
 import { Link } from 'react-scroll';
 import {useRef, useEffect, useState} from 'react'
+import Image from 'next/image';
 
 const Home = () => {
   // scif-random words
@@ -29,7 +30,7 @@ const Home = () => {
 
   // handle blob logic
   const myBlobRef = useRef(null);
- useEffect(() => {
+  useEffect(() => {
     const blob = myBlobRef.current;
     if (blob) {
       const handleMouseMove = (event) => {
@@ -61,6 +62,7 @@ const Home = () => {
   //react-scroll
   const [currentFloor, setCurrentFloor] = useState(0);
 
+  const scrollSpeed = 1000;
   const handleScrollToFloor = (floor) => {
     setCurrentFloor(floor);
   };
@@ -68,48 +70,50 @@ const Home = () => {
 
   return (
     <>
-      {/* <style>{`
+      <style>{`
           body {
             overflow: hidden;
           }
         `}
-      </style> */}
-      <div className='bg-black h-screen w-screen absolute inset-0'>
-        {/* blob and blur */}
-        <div className='flex'>
-          {/* blur */}
-          <div 
-            className='h-screen w-screen'
-            style={{
-              position: 'absolute',
-              zIndex: 2,
-              backdropFilter: 'blur(200px)'
-            }}
-            //ref={blurRef} 
-            id='blur'>
+      </style>
 
-          </div>
-          {/* background blob thingi */}
-          <div 
-            ref={myBlobRef}
-            id = 'blob'
-            className='bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
-            style={{ 
-              height: '300px',
-              width: '300px',
-              left: '50%',
-              top: '50%',
-              translate: '-50% -50%',
-              borderRadius: '50%',
-              pointerEvents: 'none'
-            }}
-          >
-          </div>
+      {/* blob and blur */}
+      <div className='flex'>
+        <div className='bg-black h-screen w-screen fixed inset-0'>
+        </div>
+        {/* blur */}
+        <div 
+          className='h-screen w-screen'
+          style={{
+            position: 'fixed',
+            zIndex: 2,
+            backdropFilter: 'blur(200px)'
+          }}
+          //ref={blurRef} 
+          id='blur'>
+
+        </div>
+        {/* background blob thingi */}
+        <div 
+          ref={myBlobRef}
+          id = 'blob'
+          className='bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
+          style={{ 
+            height: '300px',
+            width: '300px',
+            left: '50%',
+            top: '50%',
+            translate: '-50% -50%',
+            borderRadius: '50%',
+            pointerEvents: 'none'
+          }}
+        >
         </div>
         
 
         <div  className='flex' style={{zIndex: 3, position:'fixed'}}>          
-          {/* word random */}
+          {/* Nav buttons */}
+          <Link to='home' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(0)}>     
           <div 
             className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
             onMouseEnter={handleHover} 
@@ -118,68 +122,81 @@ const Home = () => {
               // zIndex: 3
             }}
             data-value='HOME'
-           > 
-          {/* <Link to='contacts' smooth={true} duration={500} onClick={() => handleScrollToFloor(3)}>HOME</Link> */}
-          HOME
-          </div>
+           > HOME  </div>
+          </Link>
 
-          <div 
-              className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
-              onMouseEnter={handleHover} 
-              style={{
-                cursor:'pointer',
-                // zIndex: 3
-              }}
-              data-value='ABOUT'
-            > ABOUT
-          </div>
+          <Link to='about' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(1)}>
+            <div 
+                className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
+                onMouseEnter={handleHover} 
+                style={{
+                  cursor:'pointer',
+                  // zIndex: 3
+                }}
+                data-value='ABOUT'
+              > ABOUT
+            </div>
+          </Link>
           
-          <div 
-              className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
-              onMouseEnter={handleHover} 
-              style={{
-                cursor:'pointer',
-                // zIndex: 3
-              }}
-              data-value='PROJECTS'
-            > PROJECTS
-          </div>
+          <Link to='projects' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(2)}>
+            <div 
+                className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
+                onMouseEnter={handleHover} 
+                style={{
+                  cursor:'pointer',
+                  // zIndex: 3
+                }}
+                data-value='PROJECTS'
+              > PROJECTS
+            </div>
+          </Link>
 
-          <div 
-              className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
-              onMouseEnter={handleHover} 
-              style={{
-                cursor:'pointer',
-                // zIndex: 3
-              }}
-              data-value='CONTACTS'
-            > 
-            {/* <Link to='contacts' smooth={true} duration={500} onClick={() => handleScrollToFloor(3)}>CONTACTS</Link> */}
-          CONTACTS
-          </div>
+            <Link to='contacts' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(3)}>          
+              <div 
+                className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
+                onMouseEnter={handleHover} 
+                style={{
+                  cursor:'pointer',
+                  // zIndex: 3
+                }}
+                data-value='CONTACTS'
+              > CONTACTS  </div>
+            </Link>
+
         </div>
 
           {/* Elevator */}
-        <div className="elevator h-screen" style={{zIndex: 3}}>
-            {/* Home Floor */}
-              <div id="home" className={`floor ${currentFloor === 0 ? 'active' : ''} h-full  text-white`} >
-            0
+        <div className="elevator h-screen" style={{zIndex: 2}}>
+          {/* Home Floor */}
+          <div id="home" className={`floor ${currentFloor === 0 ? 'active' : ''} h-full  text-white `} >
+            <div className='flex'>
+              <Image alt='' 
+                className='h-[100vh] w-[30vw] mb-0' 
+                width={500} 
+                height={1000} 
+                src='/images/Polish_20240311_204350166.png'></Image>
+                
+              <div className='mt-[30vh] tracking-widest'>
+                <h1 className='text-6xl font-mono '>Welcome to My Website</h1>
+                <p className='mt-8 font-mono text-2xl text-wrap'>This is the homepage of my website. Feel free to explore!</p>
+              </div>
+            </div>
           </div>
           {/* About Floor */}
           <div id="about" className={`floor ${currentFloor === 1 ? 'active' : ''} h-full text-white `} >
            
-            1
+            about
           </div>
 
           {/* Projects Floor */}
           <div id="projects" className={`floor ${currentFloor === 2 ? 'active' : ''} h-full text-white`} >
             
-            2
+            projects
           </div>
 
           {/* Contact Floor */}
           <div id="contacts" className={`floor ${currentFloor === 3 ? 'active' : ''} h-full text-white`} >
-            3
+            contacts
           </div>
         </div>
       </div>
