@@ -379,11 +379,12 @@ const Home = () => {
 
           {/* Contact Floor */}
           <div id="contacts" className={`floor ${currentFloor === 3 ? 'active' : ''} h-full text-white`} >
-            <div className="ml-1 sm:ml-4 flex items-start sm:items-center">
+            {/* <div className="ml-1 sm:ml-4 flex items-center justify-center">
                 <a href="https://github.com/OdongMartin"></a>
-            </div>
+            </div> */}
             
-            <div className="flex flex-col m-4 ml-8 mt-8 sm:mt-16">
+            <div className="flex items-center justify-center text-lg">
+              <div className='mt-32'>
                 <div>
                     <h className="font-bold">You can reach me at</h>
                     <p className="">Email: <span className="font-semibold">odongmartin21@gmail.com</span></p>
@@ -398,6 +399,7 @@ const Home = () => {
                 <div className="mt-8">
                     <p className="">Thank you for considering me for your project or collaboration. I look forward to hearing from you!</p>
                 </div>
+              </div>
               </div>
             </div>
           </div>
