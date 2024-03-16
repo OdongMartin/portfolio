@@ -152,7 +152,7 @@ const Home = () => {
           {/* Nav buttons */}
           <Link to='home' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(0)}>     
           <div 
-            className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
+            className=' text-white text-3xl tracking-widest m-4 h-5'
             onMouseEnter={handleHover} 
             style={{
               cursor:'pointer', 
@@ -164,7 +164,7 @@ const Home = () => {
 
           <Link to='about' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(1)}>
             <div 
-                className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
+                className=' text-white text-3xl tracking-widest m-4 mt-8 h-5'
                 onMouseEnter={handleHover} 
                 style={{
                   cursor:'pointer',
@@ -177,7 +177,7 @@ const Home = () => {
           
           <Link to='projects' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(2)}>
             <div 
-                className=' text-white font-mono text-3xl tracking-widest m-4 h-5'
+                className=' text-white text-3xl tracking-widest m-4 h-5'
                 onMouseEnter={handleHover} 
                 style={{
                   cursor:'pointer',
@@ -190,7 +190,7 @@ const Home = () => {
 
             <Link to='contacts' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(3)}>          
               <div 
-                className=' text-white font-mono text-3xl tracking-widest m-4 mt-8 h-5'
+                className=' text-white text-3xl tracking-widest m-4 mt-8 h-5'
                 onMouseEnter={handleHover} 
                 style={{
                   cursor:'pointer',
@@ -214,15 +214,15 @@ const Home = () => {
                 src='/images/Polish_20240311_204350166.png'></Image>
                 
               <div className='mt-[30vh] tracking-widest'>
-                <h1 ref={wordRef} data-value='WELCOME TO MY WEBSITE' className='text-6xl font-mono '>WELCOME TO MY WEBSITE</h1>
-                <p className='mt-8 font-mono text-2xl text-wrap'>This is the homepage of my website. Feel free to explore!</p>
+                <h1 ref={wordRef} data-value='WELCOME TO MY WEBSITE' className='text-6xl '>WELCOME TO MY WEBSITE</h1>
+                <p className='mt-8  text-2xl text-wrap'>This is the homepage of my website. Feel free to explore!</p>
               </div>
             </div>
           </div>
           {/* About Floor */}
           <div id="about" className={`floor ${currentFloor === 1 ? 'active' : ''} h-full text-white `} >
             <div className="flex items-center justify-center mt-40">
-              <div className="m-4 w-[70vw] text-wrap font-mono mt-36 p-4 text-lg">
+              <div className="m-4 w-[70vw] text-wrap mt-36 p-4 text-lg">
                 <Slider {...settings}>
                   <div className="p-4">
                       <h className="text-xl sm:text-3xl font-bold">About Me</h>
@@ -294,7 +294,7 @@ const Home = () => {
           {/* Projects Floor */}
           <div id="projects" className={`floor ${currentFloor === 2 ? 'active' : ''} h-full text-white`} >
             <div className='flex items-center justify-center'>
-              <div className="m-4 w-[70vw] text-wrap font-mono mt-36 p-4 text-lg">
+              <div className="m-4 w-[70vw] text-wrap mt-36 p-4 text-lg">
               <Slider {...settings}>
                 <div className="">
                   {/* </div><a href="https://github.com/OdongMartin/OdongMartin.github.io"><img src="img/portfolio.png" alt="website image"className=" rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
