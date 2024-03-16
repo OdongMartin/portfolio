@@ -152,10 +152,11 @@ const Home = () => {
           {/* Nav buttons */}
           <Link to='home' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(0)}>     
           <div 
-            className=' text-white text-3xl tracking-widest m-4 h-5'
+            className=' text-white text-3xl tracking-widest m-4 h-5 flex justify-center'
             onMouseEnter={handleHover} 
             style={{
-              cursor:'pointer', 
+              cursor:'pointer',
+              width: '100px',
               // zIndex: 3
             }}
             data-value='HOME'
@@ -164,10 +165,11 @@ const Home = () => {
 
           <Link to='about' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(1)}>
             <div 
-                className=' text-white text-3xl tracking-widest m-4 mt-8 h-5'
+                className=' text-white text-3xl tracking-widest m-4 mt-8 h-5 flex justify-center'
                 onMouseEnter={handleHover} 
                 style={{
                   cursor:'pointer',
+                  width: '100px',
                   // zIndex: 3
                 }}
                 data-value='ABOUT'
@@ -177,10 +179,11 @@ const Home = () => {
           
           <Link to='projects' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(2)}>
             <div 
-                className=' text-white text-3xl tracking-widest m-4 h-5'
+                className=' text-white text-3xl tracking-widest m-4 h-5 flex justify-center'
                 onMouseEnter={handleHover} 
                 style={{
                   cursor:'pointer',
+                  width: '180px',
                   // zIndex: 3
                 }}
                 data-value='PROJECTS'
@@ -190,10 +193,11 @@ const Home = () => {
 
             <Link to='contacts' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(3)}>          
               <div 
-                className=' text-white text-3xl tracking-widest m-4 mt-8 h-5'
+                className=' text-white text-3xl tracking-widest m-4 mt-8 h-5 flex justify-center'
                 onMouseEnter={handleHover} 
                 style={{
                   cursor:'pointer',
+                  width: '180px',
                   // zIndex: 3
                 }}
                 data-value='CONTACTS'
