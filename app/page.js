@@ -94,7 +94,7 @@ const Home = () => {
     dots: true,
     fade: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     waitForAnimate: false,
@@ -226,7 +226,7 @@ const Home = () => {
           {/* About Floor */}
           <div id="about" className={`floor ${currentFloor === 1 ? 'active' : ''} h-full text-white `} >
             <div className="flex items-center justify-center mt-40">
-              <div className="m-4 w-[70vw] text-wrap mt-36 p-4 text-lg">
+              <div className="m-4 w-[80vw] text-wrap mt-36 p-4 text-lg">
                 <Slider {...settings}>
                   <div className="p-4">
                       <h className="text-xl sm:text-3xl font-bold">About Me</h>
@@ -251,21 +251,23 @@ const Home = () => {
                   </div>
 
                   <div className="p-4">
-                      <h className="text-xl sm:text-3xl font-bold">Projects</h>
-                          <p className="text-lg font-semibold mt-2">Github Profile Viewer</p>
-                          <p>A web application that allows users to view GitHub profiles, repositories, and other information. It provides features such as user authentication, documentation, and more.</p>
-                      
-                          <p className="text-lg font-semibold mt-2">Task Manager</p>
-                          <p>A web application that allows users to create, manage, edit, delete and organize their tasks.</p>
+                    <h className="text-xl sm:text-3xl font-bold">Projects</h>
+                    <ul>
+                      <li className="text-lg mt-2">- Github Profile Viewer</li>
+                      {/* <p>A web application that allows users to view GitHub profiles, repositories, and other information. It provides features such as user authentication, documentation, and more.</p> */}
                   
-                          <p className="text-lg font-semibold mt-2">Malaria Metrics</p>
-                          <p>A web application for realtime reporting and visualisation of malaria cases data.</p>
+                      <li className="text-lg mt-2">- Task Manager</li>
+                      {/* <p>A web application that allows users to create, manage, edit, delete and organize their tasks.</p> */}
+              
+                      <li className="text-lg mt-2">- Malaria Metrics</li>
+                      {/* <p>A web application for realtime reporting and visualisation of malaria cases data.</p> */}
 
-                          <p className="text-lg font-semibold mt-2">E-commerce application</p>
-                          <p>A web application that allows users to create and manage their online stores.</p>
+                      <li className="text-lg mt-2">- E-commerce application</li>
+                      {/* <p>A web application that allows users to create and manage their online stores.</p> */}
 
-                          <p className="text-lg font-semibold mt-2">AI prompts</p>
-                          <p>A web application that allows users to create and share AI prompts.</p>
+                      <li className="text-lg mt-2">- AI prompts</li>
+                      {/* <p>A web application that allows users to create and share AI prompts.</p> */}
+                    </ul>
                   </div>
 
                   <div className="p-4">
@@ -298,7 +300,7 @@ const Home = () => {
           {/* Projects Floor */}
           <div id="projects" className={`floor ${currentFloor === 2 ? 'active' : ''} h-full text-white`} >
             <div className='flex items-center justify-center'>
-              <div className="m-4 w-[70vw] text-wrap mt-36 p-4 text-lg">
+              <div className="m-4 w-[80vw] text-wrap mt-36 p-4 text-lg">
               <Slider {...settings}>
                 <div className="">
                   {/* </div><a href="https://github.com/OdongMartin/OdongMartin.github.io"><img src="img/portfolio.png" alt="website image"className=" rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
