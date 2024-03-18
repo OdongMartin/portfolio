@@ -84,7 +84,7 @@ const Home = () => {
   //react-scroll
   const [currentFloor, setCurrentFloor] = useState(0);
 
-  const scrollSpeed = 1000;
+  const scrollSpeed: number = 1000;
   const handleScrollToFloor = (floor) => {
     setCurrentFloor(floor);
   };
@@ -385,7 +385,7 @@ const Home = () => {
                 <a href="https://github.com/OdongMartin"></a>
             </div> */}
             
-            <div className="flex items-center justify-center text-lg">
+            <div className="flex items-center w-[80vw] justify-center text-lg">
               <div className='mt-32'>
                 <div>
                     <h className="font-bold">You can reach me at</h>
