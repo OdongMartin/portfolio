@@ -215,7 +215,7 @@ const Home = () => {
                 className='h-[100vh] w-[30vw] mb-0' 
                 width={500} 
                 height={1000} 
-                src='/images/Polish_20240311_204350166.png'></Image>
+                src='/images/my-photo.png'></Image>
                 
               <div className='mt-[30vh] tracking-widest'>
                 <h1 ref={wordRef} data-value='WELCOME TO MY WEBSITE' className='text-6xl '>WELCOME TO MY WEBSITE</h1>
@@ -299,82 +299,107 @@ const Home = () => {
 
           {/* Projects Floor */}
           <div id="projects" className={`floor ${currentFloor === 2 ? 'active' : ''} h-full text-white`} >
-            <div className='flex items-center justify-center'>
-              <div className="m-4 w-[80vw] text-wrap mt-36 p-4 text-lg">
-              <Slider {...settings}>
-                <div className="">
-                  {/* </div><a href="https://github.com/OdongMartin/OdongMartin.github.io"><img src="img/portfolio.png" alt="website image"className=" rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h1 className="font-bold ">Personal Website</h1>
-                  <p className="">I developed my personal portfolio website to showcase my skills, projects, and experiences as a web developer. The website serves as a central hub for potential clients and collaborators to learn more about my work.</p>
-                  <p className="font-bold mt-2">Technologies Used</p>
-                  {/* <span className="text-sm sm:text-lg">- Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
+            <div className='flex justify-center'>
+              <div className="m-4 w-[80vw] text-wrap mt-28 p-4 text-lg">
+                <Slider {...settings}>
+                  <div className="">
+                    {/* </div><a href="https://github.com/OdongMartin/OdongMartin.github.io"><img src="img/portfolio.png" alt="website image"className=" rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
+                    <h1 className="font-bold ">Personal Website</h1>
+                    <p className="">I developed my personal portfolio website to showcase my skills, projects, and experiences as a web developer. The website serves as a central hub for potential clients and collaborators to learn more about my work.</p>
+                    <p className="font-bold mt-2">Technologies Used</p>
+                    {/* <span className="text-sm sm:text-lg">- Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
 
-                  <a href="https://github.com/OdongMartin/OdongMartin.github.io" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                </div>
-
-                <div className="">
-                  {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h1 className="font-bold ">Github Profile Viewer</h1>
-                  <p className="">I developed the Github Profile Viewer to allow users to easily search for and view GitHub profiles, repositories, and other information.</p>
-                  <p className="font-bold mt-2">Technologies Used</p>
-                  {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
-                  <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
-                  <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
-                  <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
-                  <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                </div>
-                
-                <div className="">
-                  {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h1 className="font-bold ">Malaria Metrics</h1>
-                  <p className="">A web application for realtime reporting and visualisation of malaria cases data.</p>
-                  <p className="font-bold mt-2">Technologies Used</p>
-                  {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
-                  <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
-                  <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
-                  <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
-                  <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                </div>
-
-                <div className="">
-                  {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h1 className="font-bold ">E-commerce application</h1>
-                  <p className="">A web application that allows users to create and manage their online stores.</p>
-                  <p className="font-bold mt-2">Technologies Used</p>
-                  {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
-                  <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
-                  <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
-                  <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
-                  <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                </div>
-
-                <div className="">
-                  {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h1 className="font-bold">AI prompts</h1>
-                  <p className="text-sm sm:text-base">A web application that allows users to create and share AI prompts.</p>
-                  <p className="font-bold mt-2">Technologies Used</p>
-                  {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
-                  <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
-                  <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
-                  <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
-                  <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                </div>
-
-                <div className="">
-                  {/* <a href="https://github.com/OdongMartin/TaskManager"><img src="img/create-task.png" alt="task manager" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <div className="p-2">
-                      <h1 className="font-bold ">Task Manager</h1>
-                      <p className="">I developed the Task Manager to provide users with a simple and intuitive way to keep track of tasks, set due dates, and monitor task status.</p>
-                      <p className="font-bold mt-2">Technologies Used</p>
-                      {/* <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
-                      <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
-                      <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
-                      <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
-                      <a href="https://github.com/OdongMartin/TaskManager" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                      <a href="https://odongtaskmanager.cyclic.app" className="block text-sm sm:text-base text-green-700">Live Demo</a>
+                    <a href="https://github.com/OdongMartin/OdongMartin.github.io" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
                   </div>
-                </div>
-              </Slider>
+
+                  <div className="">
+                    {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
+                    <h1 className="font-bold ">Github Profile Viewer</h1>
+                    <p className="">I developed the Github Profile Viewer to allow users to easily search for and view GitHub profiles, repositories, and other information.</p>
+                    <p className="font-bold mt-2">Technologies Used</p>
+                    {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
+                    <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
+                    <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
+                    <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
+                    <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                  </div>
+                  
+                  <div className="">
+                    {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
+                    <h1 className="font-bold ">Malaria Metrics</h1>
+                    <p className="">A web application for realtime reporting and visualisation of malaria cases data.</p>
+                    <p className="font-bold mt-2">Technologies Used</p>
+                    {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
+                    <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
+                    <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
+                    <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
+                    <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                  </div>
+
+                  <div className="">
+                    <h1 className="font-bold ">E-commerce application</h1>
+                    <div className='flex'>
+                      <Image alt='' 
+                      className='rounded-lg' 
+                      width={600} 
+                      height={500} 
+                      src='/images/store.png'></Image>
+                      <div className='ml-4'>
+                        <p className="">A web application that allows users to create and manage their online stores.</p>
+                        <p className="font-bold mt-2">Technologies Used</p>
+                        <div className='flex'>                        
+                          <Image alt='' 
+                          className='rounded-lg m-4' 
+                          width={50} 
+                          height={50} 
+                          src='/images/nodejs.png'></Image>
+                          <Image alt='' 
+                          className='rounded-lg ml-4' 
+                          width={100} 
+                          height={100} 
+                          src='/images/mongoDB-icon.png'></Image>
+                          <Image alt='' 
+                          className='rounded-lg m-6' 
+                          width={50} 
+                          height={50} 
+                          src='/images/tailwind-icon.png'></Image>
+                        </div>
+                        {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
+                        <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
+                        <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
+                        <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
+                        <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="">
+                    {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
+                    <h1 className="font-bold">AI prompts</h1>
+                    <p className="text-sm sm:text-base">A web application that allows users to create and share AI prompts.</p>
+                    <p className="font-bold mt-2">Technologies Used</p>
+                    {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
+                    <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
+                    <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
+                    <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
+                    <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                  </div>
+
+                  <div className="">
+                    {/* <a href="https://github.com/OdongMartin/TaskManager"><img src="img/create-task.png" alt="task manager" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
+                    <div className="p-2">
+                        <h1 className="font-bold ">Task Manager</h1>
+                        <p className="">I developed the Task Manager to provide users with a simple and intuitive way to keep track of tasks, set due dates, and monitor task status.</p>
+                        <p className="font-bold mt-2">Technologies Used</p>
+                        {/* <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
+                        <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
+                        <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
+                        <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
+                        <a href="https://github.com/OdongMartin/TaskManager" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                        <a href="https://odongtaskmanager.cyclic.app" className="block text-sm sm:text-base text-green-700">Live Demo</a>
+                    </div>
+                  </div>
+                </Slider>
               </div>
             </div>
           </div>
@@ -388,9 +413,9 @@ const Home = () => {
             <div className="flex items-center w-[80vw] justify-center text-lg">
               <div className='mt-32'>
                 <div>
-                    <h1 className="font-bold">You can reach me at</h1>
+                    <h1 className="font-bold mb-4">You can reach me at</h1>
                     <p className="">Email: <span className="font-semibold">odongmartin21@gmail.com</span></p>
-                    <p className="">GitHub: <a href="https://github.com/OdongMartin" className="text-base sm:text-2xl font-semibold">OdongMartin</a></p>
+                    <p className="">GitHub: <a href="https://github.com/OdongMartin" className=" font-semibold text-green-700">OdongMartin</a></p>
                 </div>
                 
                 <div className="mt-4">
