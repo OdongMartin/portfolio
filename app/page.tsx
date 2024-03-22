@@ -229,17 +229,17 @@ const Home = () => {
               <div className="m-4 w-[80vw] text-wrap mt-36 p-4 text-lg">
                 <Slider {...settings}>
                   <div className="p-4">
-                      <h className="text-xl sm:text-3xl font-bold">About Me</h>
+                      <h1 className="text-xl sm:text-3xl font-bold">About Me</h1>
                       <p>Hello there! 👋 I'm Odong Martin, a passionate full stack web developer with a knack for crafting digital experiences that leave a lasting impact. Here's a bit about my journey in the world of web development.</p>
                   </div>
                   
                   <div className="p-4">
-                      <h className="text-xl sm:text-3xl font-bold">Background</h>
+                      <h1 className="text-xl sm:text-3xl font-bold">Background</h1>
                       <p>I'm a self-taught web developer who has navigated the ever-evolving landscape of the web through hands-on experience and continuous learning. My journey began with taking the CS50x course from Havard, and since then, I've been on a self-driven quest to expand my skills and expertise.</p>
                   </div>
 
                   <div className="p-4">
-                      <h className="text-xl sm:text-3xl font-bold ">Skills</h>
+                      <h1 className="text-xl sm:text-3xl font-bold ">Skills</h1>
                       <p>I specialise in:</p>
                           <p>- Backend technologies such as Node.js and Express</p>
                           <p>- NextJS, React</p>
@@ -251,7 +251,7 @@ const Home = () => {
                   </div>
 
                   <div className="p-4">
-                    <h className="text-xl sm:text-3xl font-bold">Projects</h>
+                    <h1 className="text-xl sm:text-3xl font-bold">Projects</h1>
                     <ul>
                       <li className="text-lg mt-2">- Github Profile Viewer</li>
                       {/* <p>A web application that allows users to view GitHub profiles, repositories, and other information. It provides features such as user authentication, documentation, and more.</p> */}
@@ -271,12 +271,12 @@ const Home = () => {
                   </div>
 
                   <div className="p-4">
-                      <h className="text-xl sm:text-3xl font-bold ">Personal Touch</h>
+                      <h1 className="text-xl sm:text-3xl font-bold ">Personal Touch</h1>
                       <p>When I'm not coding, you can find me playing Rugby🏉 or being a Laboratory Technologist😁. I believe in maintaining a healthy work-life balance to keep the creative juices flowing.</p>
                   </div>
 
                   <div className="p-4">
-                      <h className="text-xl sm:text-3xl font-bold ">Let's Connect!</h>
+                      <h1 className="text-xl sm:text-3xl font-bold ">Let's Connect!</h1>
                       <p className=''>I'm always open to new challenges and collaborations. If you have a project in mind or just want to chat about web development, feel free to </p>
                       <Link to='contacts' smooth={true} duration={scrollSpeed} onClick={() => handleScrollToFloor(3)}>          
                         <div 
@@ -304,7 +304,7 @@ const Home = () => {
               <Slider {...settings}>
                 <div className="">
                   {/* </div><a href="https://github.com/OdongMartin/OdongMartin.github.io"><img src="img/portfolio.png" alt="website image"className=" rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h className="font-bold ">Personal Website</h>
+                  <h1 className="font-bold ">Personal Website</h1>
                   <p className="">I developed my personal portfolio website to showcase my skills, projects, and experiences as a web developer. The website serves as a central hub for potential clients and collaborators to learn more about my work.</p>
                   <p className="font-bold mt-2">Technologies Used</p>
                   {/* <span className="text-sm sm:text-lg">- Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
@@ -314,7 +314,7 @@ const Home = () => {
 
                 <div className="">
                   {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h className="font-bold ">Github Profile Viewer</h>
+                  <h1 className="font-bold ">Github Profile Viewer</h1>
                   <p className="">I developed the Github Profile Viewer to allow users to easily search for and view GitHub profiles, repositories, and other information.</p>
                   <p className="font-bold mt-2">Technologies Used</p>
                   {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
@@ -326,7 +326,7 @@ const Home = () => {
                 
                 <div className="">
                   {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h className="font-bold ">Malaria Metrics</h>
+                  <h1 className="font-bold ">Malaria Metrics</h1>
                   <p className="">A web application for realtime reporting and visualisation of malaria cases data.</p>
                   <p className="font-bold mt-2">Technologies Used</p>
                   {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
@@ -338,7 +338,7 @@ const Home = () => {
 
                 <div className="">
                   {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h className="font-bold ">E-commerce application</h>
+                  <h1 className="font-bold ">E-commerce application</h1>
                   <p className="">A web application that allows users to create and manage their online stores.</p>
                   <p className="font-bold mt-2">Technologies Used</p>
                   {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
@@ -350,7 +350,7 @@ const Home = () => {
 
                 <div className="">
                   {/* <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer"><img src="img/profile-viewer.png" alt=" GitHub-Profile-Viewer" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                  <h className="font-bold">AI prompts</h>
+                  <h1 className="font-bold">AI prompts</h1>
                   <p className="text-sm sm:text-base">A web application that allows users to create and share AI prompts.</p>
                   <p className="font-bold mt-2">Technologies Used</p>
                   {/* <span className="text-sm sm:text-base">NodeJS</span> <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
@@ -363,7 +363,7 @@ const Home = () => {
                 <div className="">
                   {/* <a href="https://github.com/OdongMartin/TaskManager"><img src="img/create-task.png" alt="task manager" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
                   <div className="p-2">
-                      <h className="font-bold ">Task Manager</h>
+                      <h1 className="font-bold ">Task Manager</h1>
                       <p className="">I developed the Task Manager to provide users with a simple and intuitive way to keep track of tasks, set due dates, and monitor task status.</p>
                       <p className="font-bold mt-2">Technologies Used</p>
                       {/* <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
@@ -388,13 +388,13 @@ const Home = () => {
             <div className="flex items-center w-[80vw] justify-center text-lg">
               <div className='mt-32'>
                 <div>
-                    <h className="font-bold">You can reach me at</h>
+                    <h1 className="font-bold">You can reach me at</h1>
                     <p className="">Email: <span className="font-semibold">odongmartin21@gmail.com</span></p>
                     <p className="">GitHub: <a href="https://github.com/OdongMartin" className="text-base sm:text-2xl font-semibold">OdongMartin</a></p>
                 </div>
                 
                 <div className="mt-4">
-                    <h className="font-bold">Location</h>
+                    <h1 className="font-bold">Location</h1>
                     <p className="">I'm currently located in Kampala, Uganda. Open to remote work and collaboration opportunities.</p>
                 </div>
 
