@@ -304,9 +304,31 @@ const Home = () => {
                 <Slider {...settings}>
                   <div className="">
                     {/* </div><a href="https://github.com/OdongMartin/OdongMartin.github.io"><img src="img/portfolio.png" alt="website image"className=" rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                    <h1 className="font-bold ">Personal Website</h1>
+                    <h1 className="font-bold text-2xl mb-4">Personal Website</h1>
                     <p className="">I developed my personal portfolio website to showcase my skills, projects, and experiences as a web developer. The website serves as a central hub for potential clients and collaborators to learn more about my work.</p>
-                    <p className="font-bold mt-2">Technologies Used</p>
+                    <p className="font-bold mt-4">Technologies Used</p>
+                    <div className='flex'>                        
+                          <Image alt='' 
+                          className='rounded-lg m-4 p-2' 
+                          width={50} 
+                          height={50} 
+                          src='/images/nodejs.png'></Image>  
+                          <Image alt='' 
+                          className='rounded-lg my-6' 
+                          width={50} 
+                          height={50} 
+                          src='/images/javascript-logo.png'></Image>                
+                          <Image alt='' 
+                          className='rounded-lg m-6 p-2' 
+                          width={50} 
+                          height={50} 
+                          src='/images/tailwind-icon.png'></Image>
+                          <Image alt='' 
+                          className='rounded-lg' 
+                          width={100} 
+                          height={100} 
+                          src='/images/mongoDB-icon.png'></Image>
+                        </div>
                     {/* <span className="text-sm sm:text-lg">- Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
 
                     <a href="https://github.com/OdongMartin/OdongMartin.github.io" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
@@ -349,7 +371,7 @@ const Home = () => {
                         <p className="font-bold mt-4">Technologies Used</p>
                         <div className='flex'>                        
                           <Image alt='' 
-                          className='rounded-lg m-4' 
+                          className='rounded-lg m-4 p-2' 
                           width={50} 
                           height={50} 
                           src='/images/nodejs.png'></Image>  
@@ -384,21 +406,46 @@ const Home = () => {
                     <span className="text-sm sm:text-base">, Javascript</span> <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
                     <span className="text-sm sm:text-base">, MongoDB</span> <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
                     <span className="text-sm sm:text-base">, Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" class="w-6 sm:w-8 inline-flex"> */}
-                    <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                    <a href="https://github.com/OdongMartin/GitHub-Profile-Viewer" className="text-sm sm:text-base transition-colors ease-out duration-500 hover:text-green-300 text-green-700 block">Github Repository</a>
                   </div>
 
-                  <div className="">
-                    {/* <a href="https://github.com/OdongMartin/TaskManager"><img src="img/create-task.png" alt="task manager" className="rounded-xl w-full h-20 sm:h-32 object-cover"></a> */}
-                    <div className="p-2">
-                        <h1 className="font-bold ">Task Manager</h1>
-                        <p className="">I developed the Task Manager to provide users with a simple and intuitive way to keep track of tasks, set due dates, and monitor task status.</p>
-                        <p className="font-bold mt-2">Technologies Used</p>
-                        {/* <img src="img/node.png" alt="node" className="w-8 sm:w-10 inline-flex">
-                        <img src="img/js.png" alt="js" className="w-6 sm:w-8 inline-flex"> 
-                        <img src="img/mongodb.png" alt="mongoDB" className="w-12 sm:w-14 inline-flex">
-                        <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
-                        <a href="https://github.com/OdongMartin/TaskManager" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
-                        <a href="https://odongtaskmanager.cyclic.app" className="block text-sm sm:text-base text-green-700">Live Demo</a>
+                  <div className="">            
+                    <h1 className="font-bold text-2xl">Task Manager</h1>
+                      <div className='flex mt-4'>
+                        <Image alt='' 
+                        className='rounded-lg' 
+                        width={600} 
+                        height={500} 
+                        src='/images/create-task.png'></Image>
+                        <div className='ml-4'>
+                          <p className="">I developed the Task Manager to provide users with a simple and intuitive way to keep track of tasks, set due dates, and monitor task status.</p>
+                          <p className="font-bold mt-4">Technologies Used</p>
+                          <div className='flex'>                        
+                            <Image alt='' 
+                            className='rounded-lg m-4 p-2' 
+                            width={50} 
+                            height={50} 
+                            src='/images/nodejs.png'></Image>  
+                            <Image alt='' 
+                            className='rounded-lg my-6' 
+                            width={50} 
+                            height={50} 
+                            src='/images/javascript-logo.png'></Image>                
+                            <Image alt='' 
+                            className='rounded-lg m-6 p-2' 
+                            width={50} 
+                            height={50} 
+                            src='/images/tailwind-icon.png'></Image>
+                            <Image alt='' 
+                            className='rounded-lg' 
+                            width={100} 
+                            height={100} 
+                            src='/images/mongoDB-icon.png'></Image>
+
+                          </div>
+                          <a href="https://github.com/OdongMartin/TaskManager" className="text-sm sm:text-base transition-colors ease-out duration-500 hover:text-green-300 text-green-700 block font-bold w-36">Github Repository</a>
+                          <a href="https://odongtaskmanager.cyclic.app" className="block text-sm sm:text-base transition-colors ease-out duration-500 hover:text-green-300 text-green-700 font-bold w-24">Live Demo</a>
+                        </div>
                     </div>
                   </div>
                 </Slider>
