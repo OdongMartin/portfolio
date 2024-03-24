@@ -309,17 +309,17 @@ const Home = () => {
                     <p className="font-bold mt-4">Technologies Used</p>
                     <div className='flex'>                        
                           <Image alt='' 
-                          className='rounded-lg m-4 p-2' 
+                          className='rounded-full my-8 mr-4 bg-white' 
                           width={50} 
                           height={50} 
-                          src='/images/nodejs.png'></Image>  
+                          src='/images/nextjs-icon.png'></Image>  
                           <Image alt='' 
                           className='rounded-lg my-6' 
                           width={50} 
                           height={50} 
                           src='/images/typescript-logo.png'></Image>                
                           <Image alt='' 
-                          className='rounded-lg m-6 p-2' 
+                          className='rounded-lg my-10 ml-4' 
                           width={50} 
                           height={50} 
                           src='/images/tailwind-icon.png'></Image>
@@ -331,7 +331,7 @@ const Home = () => {
                         </div>
                     {/* <span className="text-sm sm:text-lg">- Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
 
-                    <a href="https://github.com/OdongMartin/OdongMartin.github.io" className="text-sm sm:text-base text-green-700 block">Github Repository</a>
+                    <a href="https://github.com/OdongMartin/OdongMartin.github.io" className="text-sm sm:text-base font-bold transition-colors ease-out duration-500 hover:text-green-300 text-green-700 block">Github Repository</a>
                   </div>
 
                   <div className="">
