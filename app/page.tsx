@@ -317,17 +317,17 @@ const Home = () => {
                           className='rounded-lg my-6' 
                           width={50} 
                           height={50} 
-                          src='/images/javascript-logo.png'></Image>                
+                          src='/images/typescript-logo.png'></Image>                
                           <Image alt='' 
                           className='rounded-lg m-6 p-2' 
                           width={50} 
                           height={50} 
                           src='/images/tailwind-icon.png'></Image>
-                          <Image alt='' 
+                          {/* <Image alt='' 
                           className='rounded-lg' 
                           width={100} 
                           height={100} 
-                          src='/images/mongoDB-icon.png'></Image>
+                          src='/images/mongoDB-icon.png'></Image> */}
                         </div>
                     {/* <span className="text-sm sm:text-lg">- Tailwind CSS</span> <img src="img/tailwindcss.png" alt="tailwind css" className="w-6 sm:w-8 inline-flex">  */}
 
