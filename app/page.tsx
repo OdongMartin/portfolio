@@ -133,7 +133,7 @@ const Home = () => {
         <div 
           ref={myBlobRef}
           id = 'blob'
-          className='bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
+          className=' hidden md:block bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
           style={{ 
             position:'absolute',
             height: '300px',
@@ -532,32 +532,28 @@ const Home = () => {
           </div>
 
           {/* Contact Floor */}
-          <div id="contacts" className={`floor ${currentFloor === 3 ? 'active' : ''} h-full text-white`} >
-            {/* <div className="ml-1 sm:ml-4 flex items-center justify-center">
-                <a href="https://github.com/OdongMartin"></a>
-            </div> */}
-            
+          <div id="contacts" className={`floor ${currentFloor === 3 ? 'active' : ''} h-full text-white`} >            
             <div className="flex items-center w-[80vw] justify-center text-lg">
-              <div className='mt-32'>
+              <div className='mt-32 mx-24'>
                 <div>
-                    <h1 className="font-bold mb-4">You can reach me at</h1>
-                    <p className="">Email: <span className="font-semibold">odongmartin21@gmail.com</span></p>
-                    <p className="">GitHub: <a href="https://github.com/OdongMartin" className=" font-semibold text-green-700">OdongMartin</a></p>
+                  <h1 className="font-bold mb-4">You can reach me at</h1>
+                  <p className="">Email: <span className="font-semibold">odongmartin21@gmail.com</span></p>
+                  <p className="">GitHub: <a href="https://github.com/OdongMartin" className=" font-semibold text-green-700">OdongMartin</a></p>
                 </div>
                 
                 <div className="mt-4">
-                    <h1 className="font-bold">Location</h1>
-                    <p className="">I'm currently located in Kampala, Uganda. Open to remote work and collaboration opportunities.</p>
+                  <h1 className="font-bold">Location</h1>
+                  <p className="">I'm currently located in Kampala, Uganda. Open to remote work and collaboration opportunities.</p>
                 </div>
 
                 <div className="mt-8">
-                    <p className="">Thank you for considering me for your project or collaboration. I look forward to hearing from you!</p>
+                  <p className="">Thank you for considering me for your project or collaboration. I look forward to hearing from you!</p>
                 </div>
-              </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </>
   )
 }
