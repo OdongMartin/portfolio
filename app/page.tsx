@@ -572,7 +572,7 @@ const Home = () => {
           {/* middle */}
           <div className='h-[90vh] w-[60vw]'>
             <div className=' bg-gray-700 border-2 border-red-600 h-[10vh] w-[60vw]' style={{zIndex: 3, position:'fixed'}} >
-                          {/* top of elevator sjpould have floor */}
+                          <h1 className='text-yellow-300'>Still Working on Mobile version - Elevator lift</h1>
             </div>
             <div className=' bg-gray-700 border-2 border-blue-600 h-[90vh] w-[60vw]'>
                 {/* content  */}
