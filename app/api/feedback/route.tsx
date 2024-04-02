@@ -9,7 +9,7 @@ export const POST = async (req) => {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
+        user: process.env.NEXT_PERSONAL_EMAIL,
         pass: process.env.NEXT_EMAIL_PASSWORD
       },
       tls: {
@@ -19,8 +19,8 @@ export const POST = async (req) => {
 
     // Email options
     const mailOptions = {
-      from: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
-      to: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
+      from: process.env.NEXT_PERSONAL_EMAIL,
+      to: process.env.NEXT_PERSONAL_EMAIL,
       subject: 'Feedback from your website',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     };
