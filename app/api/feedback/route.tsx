@@ -10,7 +10,7 @@ export const POST = async (req) => {
       service: 'Gmail',
       auth: {
         user: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
-        pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD
+        pass: process.env.NEXT_EMAIL_PASSWORD
       },
       tls: {
         rejectUnauthorized: false 
