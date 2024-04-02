@@ -165,7 +165,7 @@ const Home = () => {
           <div 
             ref={myBlobRef}
             id = 'blob'
-            className=' hidden md:block bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
+            className=' hidden lg:block bg-gradient-to-r from-emerald-500 to-violet-800 animate-[spin_3s_linear_infinite]'
             style={{ 
               position:'absolute',
               height: '300px',
