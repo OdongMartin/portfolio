@@ -26,9 +26,15 @@ export default function FeedbackForm() {
         body: JSON.stringify(formData)
       });
       if (response.ok) {
+        setFormData((prevFormData) => ({ ...prevFormData, message: '' }));
+        // show success message to the user
+        alert('Feedback sent successfully');
+
         console.log('Feedback sent successfully');
       } else {
         console.error('Failed to send feedback');
+        alert('Failed to send feedback');
+
       }
     } catch (error) {
       console.error('Error:', error);
