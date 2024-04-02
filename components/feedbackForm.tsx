@@ -46,7 +46,7 @@ export default function FeedbackForm() {
 
   return (
     <>
-      <Toaster richColors/>
+      <Toaster richColors style={{bottom:0}}/>
       <form className='grid gap-2 items-center justify-center text-black' onSubmit={handleSubmit}>
         <span className='text-white mb-4 text-xl font-bold'>FeedBack</span>
         <label className='text-white'>Name</label>
