@@ -48,7 +48,7 @@ export default function FeedbackForm() {
     <>
       
       <form className='grid gap-2 items-center justify-center text-black' onSubmit={handleSubmit}>
-        <Toaster richColors className='mb-12'/>
+        <Toaster richColors className='mb-[10vh]'/>
         <span className='text-white mb-4 text-xl font-bold'>FeedBack</span>
         <label className='text-white'>Name</label>
         <input className='rounded-lg' type="text" name="name" value={formData.name} onChange={handleChange} />
